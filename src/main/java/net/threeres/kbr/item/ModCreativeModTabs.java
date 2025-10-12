@@ -9,6 +9,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.threeres.kbr.KBR;
+import net.threeres.kbr.block.ModBlocks;
 
 public class ModCreativeModTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
@@ -22,6 +23,9 @@ public class ModCreativeModTabs {
 
                         //how to add vanilla items
                         output.accept(Items.DRAGON_EGG);
+
+                        //adding block items
+                        output.accept(ModBlocks.TEST_BLOCK.get());
                     })
                     .build());
 
