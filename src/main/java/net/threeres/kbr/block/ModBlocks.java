@@ -1,9 +1,11 @@
 package net.threeres.kbr.block;
 
+import net.threeres.kbr.KBR;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.threeres.kbr.KBR;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.RegistryObject;
@@ -21,7 +23,13 @@ public class ModBlocks {
 
     //custom blocks
     public static final RegistryObject<Block> TEST_BLOCK =
-            RegisterBlock("test_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+            RegisterBlock("test_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    //custom ores
+    public static final RegistryObject<Block> TEST_ORE =
+            RegisterBlock("test_ore",  () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
+                    .strength(2f)
+                    .requiresCorrectToolForDrops(), UniformInt.of(3, 6)));
 
     private static <T extends Block> RegistryObject<T> RegisterBlock(String name, Supplier<T> block) {
         RegistryObject<T> ret = BLOCKS.register(name, block);

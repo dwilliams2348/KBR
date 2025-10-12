@@ -26,6 +26,7 @@ public class ModCreativeModTabs {
 
                         //adding block items
                         output.accept(ModBlocks.TEST_BLOCK.get());
+                        output.accept(ModBlocks.TEST_ORE.get());
                     })
                     .build());
 
