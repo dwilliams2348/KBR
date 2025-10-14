@@ -12,6 +12,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.threeres.kbr.block.custom.SoundBlock;
 import net.threeres.kbr.item.ModItems;
 
 import java.util.function.Supplier;
@@ -24,6 +25,9 @@ public class ModBlocks {
     //custom blocks
     public static final RegistryObject<Block> TEST_BLOCK =
             RegisterBlock("test_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final RegistryObject<Block> SOUND_BLOCK =
+            RegisterBlock("sound_block", () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL)));
 
     //custom ores
     public static final RegistryObject<Block> TEST_ORE =
