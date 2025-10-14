@@ -1,0 +1,10 @@
+// 1.20.1	2025-10-13T22:07:21.114095	Block States: kbr
+7ebb11e3e68eb5284a3fa933202fefb518ab9cd0 assets/kbr/blockstates/sound_block.json
+72d2fe0f83ca06bdecaace96a37311f196f5e854 assets/kbr/blockstates/test_block.json
+f63b9256746c71a6f4fd12ccdabe9763a0e03587 assets/kbr/blockstates/test_ore.json
+3c925d258cdac4f7e0c9da2800dd29d55c4e8595 assets/kbr/models/block/sound_block.json
+a8fa03286a172b1794b682d718d2c9441fc1c026 assets/kbr/models/block/test_block.json
+3218c82a9c7e587b68a29ba18b57d7525760f279 assets/kbr/models/block/test_ore.json
+34c6ca959dc86320ce288aefa69652def5091e71 assets/kbr/models/item/sound_block.json
+8dc261c552346f22861dbabc2555644377be388b assets/kbr/models/item/test_block.json
+ebe49618beb6fbf4413c734f76408e966b5fec2d assets/kbr/models/item/test_ore.json

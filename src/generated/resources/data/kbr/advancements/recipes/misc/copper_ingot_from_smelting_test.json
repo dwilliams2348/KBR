@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_test": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kbr:test"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "kbr:copper_ingot_from_smelting_test"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_test",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "kbr:copper_ingot_from_smelting_test"
+    ]
+  },
+  "sends_telemetry_event": false
+}
