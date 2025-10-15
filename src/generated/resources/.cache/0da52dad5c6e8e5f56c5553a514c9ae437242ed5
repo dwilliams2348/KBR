@@ -1,0 +1,10 @@
+// 1.20.1	2025-10-13T22:07:21.1130932	Tags for minecraft:block mod id kbr
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/forge/tags/blocks/needs_netherite_tool.json
+80709c4507dbb9600416c280ff8242ee4d7c9c1f data/kbr/tags/blocks/metal_detector_valuables.json
+77941cfab5a69825af7787596b1d2b62d0a4d28b data/minecraft/tags/blocks/mineable/axe.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/minecraft/tags/blocks/mineable/hoe.json
+d99aa3141048f3fb4d913d12b562cdd373d882e2 data/minecraft/tags/blocks/mineable/pickaxe.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/minecraft/tags/blocks/mineable/shovel.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/minecraft/tags/blocks/needs_diamond_tool.json
+d99aa3141048f3fb4d913d12b562cdd373d882e2 data/minecraft/tags/blocks/needs_iron_tool.json
+77941cfab5a69825af7787596b1d2b62d0a4d28b data/minecraft/tags/blocks/needs_stone_tool.json

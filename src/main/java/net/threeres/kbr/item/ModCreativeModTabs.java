@@ -20,6 +20,7 @@ public class ModCreativeModTabs {
                     .title(Component.translatable("creativetab.kbr_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.TEST_ITEM.get()); // the order of these items is the order they are shown in game
+                        output.accept(ModItems.METAL_DETECTOR.get());
 
                         //how to add vanilla items
                         output.accept(Items.DRAGON_EGG);
@@ -27,6 +28,8 @@ public class ModCreativeModTabs {
                         //adding block items
                         output.accept(ModBlocks.TEST_BLOCK.get());
                         output.accept(ModBlocks.TEST_ORE.get());
+
+                        output.accept(ModBlocks.SOUND_BLOCK.get());
                     })
                     .build());
 
