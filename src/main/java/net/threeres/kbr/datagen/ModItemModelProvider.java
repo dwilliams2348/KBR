@@ -17,11 +17,11 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        SimpleItem(ModItems.TEST_ITEM);
-        SimpleItem(ModItems.METAL_DETECTOR);
+        simpleItem(ModItems.TEST_ITEM);
+        simpleItem(ModItems.METAL_DETECTOR);
     }
 
-    private ItemModelBuilder SimpleItem(RegistryObject<Item> item) {
+    private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
         return withExistingParent(item.getId().getPath(),
                 ResourceLocation.tryParse("item/generated")).texture("layer0",
                 ResourceLocation.tryBuild(KBR.MOD_ID, "item/" + item.getId().getPath()));

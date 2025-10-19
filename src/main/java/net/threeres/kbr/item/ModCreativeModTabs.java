@@ -33,7 +33,7 @@ public class ModCreativeModTabs {
                     })
                     .build());
 
-    public static void Register(IEventBus eventBus){
+    public static void register(IEventBus eventBus){
         CREATIVE_MODE_TABS.register(eventBus);
     }
 }

@@ -11,15 +11,15 @@ import net.minecraft.world.level.block.Block;
 public class ModTags {
     public static class Blocks{
         public static final TagKey<Block> METAL_DETECTOR_VALUABLES =
-                Tag("metal_detector_valuables");
+                tag("metal_detector_valuables");
 
-        private static TagKey<Block> Tag(String name){
+        private static TagKey<Block> tag(String name){
             return BlockTags.create(new ResourceLocation(KBR.MOD_ID, name));
         }
     }
 
     public static class Items{
-        private static TagKey<Item> Tag(String name){
+        private static TagKey<Item> tag(String name){
             return ItemTags.create(new ResourceLocation(KBR.MOD_ID, name));
         }
     }

@@ -15,14 +15,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        BlockWithItem(ModBlocks.TEST_BLOCK);
+        blockWithItem(ModBlocks.TEST_BLOCK);
 
-        BlockWithItem(ModBlocks.TEST_ORE);
+        blockWithItem(ModBlocks.TEST_ORE);
 
-        BlockWithItem(ModBlocks.SOUND_BLOCK);
+        blockWithItem(ModBlocks.SOUND_BLOCK);
     }
 
-    private void BlockWithItem(RegistryObject<Block> blockRegistryObject) {
+    private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
     }
 }

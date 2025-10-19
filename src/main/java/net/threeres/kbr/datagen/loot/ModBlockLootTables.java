@@ -1,7 +1,6 @@
 package net.threeres.kbr.datagen.loot;
 
 import net.minecraft.data.loot.BlockLootSubProvider;
-import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.enchantment.Enchantments;
@@ -30,10 +29,10 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         //ores
         this.add(ModBlocks.TEST_ORE.get(),
-                block -> CreateOreDrops(ModBlocks.TEST_ORE.get(), ModItems.TEST_ITEM.get(), 1f, 100f));
+                block -> createOreDrops(ModBlocks.TEST_ORE.get(), ModItems.TEST_ITEM.get(), 1f, 100f));
     }
 
-    protected LootTable.Builder CreateOreDrops(Block block, Item item, float min, float max){
+    protected LootTable.Builder createOreDrops(Block block, Item item, float min, float max){
         return createSilkTouchDispatchTable(block,
                 this.applyExplosionDecay(block,
                         LootItem.lootTableItem(item)

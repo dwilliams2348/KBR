@@ -8,7 +8,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.threeres.kbr.util.ModTags;
 
@@ -28,8 +27,8 @@ public class MetalDetectorItem extends Item {
             for(int i = 0; i <= positionClicked.getY() + 64; ++i) {
                 BlockState state = pContext.getLevel().getBlockState(positionClicked.below(i));
 
-                if(IsValuableBlock(state)){
-                    OutputValuableCoordinates(positionClicked.below(i), player, state.getBlock());
+                if(isValuableBlock(state)){
+                    outputValuableCoordinates(positionClicked.below(i), player, state.getBlock());
                     foundBlock = true;
 
                     break;
@@ -47,12 +46,12 @@ public class MetalDetectorItem extends Item {
         return InteractionResult.SUCCESS;
     }
 
-    private void OutputValuableCoordinates(BlockPos blockPos, Player player, Block block) {
+    private void outputValuableCoordinates(BlockPos blockPos, Player player, Block block) {
         player.sendSystemMessage(Component.literal("Found " + I18n.get(block.getDescriptionId()) + " at "
         + "(" + blockPos.getX() + ", " + blockPos.getY() + ", " + blockPos.getZ() + ")"));
     }
 
-    private boolean IsValuableBlock(BlockState state) {
+    private boolean isValuableBlock(BlockState state) {
         //can be made much better with tags
         return state.is(ModTags.Blocks.METAL_DETECTOR_VALUABLES);
     }

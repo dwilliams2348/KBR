@@ -24,28 +24,28 @@ public class ModBlocks {
 
     //custom blocks
     public static final RegistryObject<Block> TEST_BLOCK =
-            RegisterBlock("test_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            registerBlock("test_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
     public static final RegistryObject<Block> SOUND_BLOCK =
-            RegisterBlock("sound_block", () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL)));
+            registerBlock("sound_block", () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL)));
 
     //custom ores
     public static final RegistryObject<Block> TEST_ORE =
-            RegisterBlock("test_ore",  () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
+            registerBlock("test_ore",  () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
                     .strength(2f)
                     .requiresCorrectToolForDrops(), UniformInt.of(3, 6)));
 
-    private static <T extends Block> RegistryObject<T> RegisterBlock(String name, Supplier<T> block) {
+    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> ret = BLOCKS.register(name, block);
-        RegisterBlockItem(name, ret);
+        registerBlockItem(name, ret);
         return ret;
     }
 
-    private static <T extends Block>RegistryObject<Item> RegisterBlockItem(String name, RegistryObject<T> block) {
+    private static <T extends Block>RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
         return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
-    public static void Register(IEventBus eventBus) {
+    public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
     }
 }

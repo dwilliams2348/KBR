@@ -1,7 +1,6 @@
 package net.threeres.kbr;
 
 import com.mojang.logging.LogUtils;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -10,7 +9,6 @@ import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -30,12 +28,12 @@ public class KBR {
         IEventBus modEventBus = context.getModEventBus();
 
         //registers the custom creative mode tabs
-        ModCreativeModTabs.Register(modEventBus);
+        ModCreativeModTabs.register(modEventBus);
 
         //registers modded items into game
-        ModItems.Register(modEventBus);
+        ModItems.register(modEventBus);
         //register modded blocks into game
-        ModBlocks.Register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
